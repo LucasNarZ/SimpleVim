@@ -1,6 +1,10 @@
 return {
     "kyazdani42/nvim-tree.lua",
     config = function()
-        require("nvim-tree").setup()
+	    require("nvim-tree").setup({
+		    filters = {
+			    git_ignored = false
+		    }
+	    })
     end,
 }
