@@ -6,3 +6,4 @@ local nvim_lsp = require("lspconfig")
 nvim_lsp.tsserver.setup{}
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.clipboard = "unnamedplus"
