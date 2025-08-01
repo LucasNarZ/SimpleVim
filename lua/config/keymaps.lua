@@ -19,3 +19,6 @@ vim.keymap.set("v", "y", '"+y', opts)
 vim.keymap.set("v", "d", '"+d', opts)
 vim.keymap.set("v", "p", '"+p', opts)
 vim.keymap.set("v", "P", '"+P', opts)
+
+vim.keymap.set('t', '<C-x>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', opts) 
+
