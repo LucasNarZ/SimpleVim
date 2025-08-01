@@ -27,7 +27,7 @@
 Clone this repository into your Neovim configuration directory:
 
 ```bash
-git clone https://github.com/LucasNarZ/SimpleVim ~/.config/nvim
+git clone https://github.com/LucasNarZ/SimpleVim.git ~/.config/nvim
 ```
 Open Neovim, and the plugin manager will automatically install all required plugins on startup.
 
