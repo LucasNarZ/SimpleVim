@@ -4,6 +4,14 @@ return {
 	    require("nvim-tree").setup({
 		    filters = {
 			    git_ignored = false
+		    },
+		    view = {
+			    mapping = {
+				    custom_only = false,
+				    list = {
+					  { key = "<Space>", action = "edit_or_open", mode = "n" }
+				    }
+			    }
 		    }
 	    })
     end,
