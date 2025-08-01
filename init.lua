@@ -14,3 +14,6 @@ vim.diagnostic.config({
 
 vim.opt.relativenumber = true
 vim.opt.number = true
+
+vim.lsp.buf.code_action()
+
