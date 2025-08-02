@@ -15,6 +15,18 @@ vim.diagnostic.config({
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+vim.o.foldenable = true
+vim.o.foldmethod = "indent"
+vim.o.foldlevel = 99
+vim.opt.fillchars = { eob = " ", fold = " " }
+vim.opt.foldtext = "v:lua.custom_fold_text()"
+
+function _G.custom_fold_text()
+  local line = vim.fn.getline(vim.v.foldstart)
+  local lines_count = vim.v.foldend - vim.v.foldstart + 1
+  return "▶ " .. line .. " ... (" .. lines_count .. " lines)"
+end
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "javascript", "typescript", "typescriptreact", "javascriptreact", "html", "css", "lua", "json", "yaml", "markdown" },
 	callback = function()
