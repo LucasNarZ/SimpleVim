@@ -40,3 +40,5 @@ vim.keymap.set("n", "<leader>5", function() require("harpoon.ui").nav_file(5) en
 -- Indent Format
 vim.keymap.set("n", "<leader>=", "ggvG=", opts)
 
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
