@@ -48,7 +48,7 @@ return {
 					debounce_text_changes = 150,
 				},
 				capabilities = capabilities
-
+            }
 		end
 	}
 }
