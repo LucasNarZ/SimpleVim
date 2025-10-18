@@ -14,9 +14,10 @@ vim.keymap.set('t', '<C-x>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', opts)
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-vim.keymap.set("n", "<leader>yG", "+yG", opts);
-vim.keymap.set("n", "<leader>y", "+y", opts);
-vim.keymap.set("n", "<leader>Y", "+yy", opts);
+vim.keymap.set("n", "<leader>yG", '"+yG', opts);
+vim.keymap.set("n", "<leader>y", '"+y', opts);
+vim.keymap.set("n", "<leader>Y", '"+yy', opts);
+vim.keymap.set("v", "<leader>y", '"+y', opts);
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require("harpoon.mark").add_file() end)
