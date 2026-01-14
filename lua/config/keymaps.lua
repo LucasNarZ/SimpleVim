@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 local opts = { noremap = true, silent = true }
 
 -- ToggleTerm
-vim.keymap.set('t', '<C-x>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', opts) 
+vim.keymap.set('t', '<C-x>', '<C-\\><C-n><Cmd>ToggleTerm<CR>', opts)
 
 -- Move lines using Alt
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
@@ -33,20 +33,20 @@ local treeApi = require('nvim-tree.api')
 local view = require('nvim-tree.view')
 
 local function get_width()
-  if view.is_visible() then
-    return vim.api.nvim_win_get_width(view.get_winnr())
-  end
-  return 0
+    if view.is_visible() then
+        return vim.api.nvim_win_get_width(view.get_winnr())
+    end
+    return 0
 end
 
 vim.keymap.set('n', '<leader>+', function()
-  local width = get_width()
-  treeApi.tree.resize({width = width + 5})
+    local width = get_width()
+    treeApi.tree.resize({ width = width + 5 })
 end)
 
 vim.keymap.set('n', '<leader>-', function()
-  local width = get_width()
-  treeApi.tree.resize({width = width - 5})
+    local width = get_width()
+    treeApi.tree.resize({ width = width - 5 })
 end)
 
 vim.keymap.set('n', '<leader>e', treeApi.tree.toggle)
@@ -58,3 +58,4 @@ vim.keymap.set("n", "<leader>=", "ggvG=", opts)
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+vim.keymap.set("n", "<Esc><Esc>", ":noh<CR>")
