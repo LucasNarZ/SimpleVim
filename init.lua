@@ -28,7 +28,7 @@ function _G.custom_fold_text()
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "javascript", "typescript", "typescriptreact", "javascriptreact", "html", "css", "lua", "json", "yaml", "markdown" },
+    pattern = { "javascript", "typescript", "typescriptreact", "javascriptreact", "html", "css", "lua", "json", "markdown", "c", "c++", "lua", "header" },
     callback = function()
         vim.bo.tabstop = 4
         vim.bo.shiftwidth = 4
@@ -37,10 +37,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "c", "lua", "c++", "header" },
+    pattern = { "yaml", "yml" },
     callback = function()
-        vim.bo.tabstop = 4
-        vim.bo.shiftwidth = 4
+        vim.bo.tabstop = 2
+        vim.bo.shiftwidth = 2
         vim.bo.expandtab = true
     end
 })
