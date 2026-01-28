@@ -59,3 +59,6 @@ vim.keymap.set("n", "<leader>=", "ggvG=", opts)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<Esc><Esc>", ":noh<CR>")
+
+
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
